@@ -1,0 +1,60 @@
+name: Generate and Split ICS
+
+on:
+  schedule:
+    - cron: '0 * * * *' # toutes les heures
+  workflow_dispatch:
+
+jobs:
+  generate_ics:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m playwright install
+
+      - name: Run global ICS script
+        env:
+          MYK_USERNAME: ${{ secrets.MYK_USERNAME }}
+          MYK_PASSWORD: ${{ secrets.MYK_PASSWORD }}
+          MYK_BASE_URL: ${{ secrets.MYK_BASE_URL }}
+          MYK_API_ENDPOINT: ${{ secrets.MYK_API_ENDPOINT }}
+          MYK_MODULE_AGENDA: ${{ secrets.MYK_MODULE_AGENDA }}
+          MYK_ACTION_AGENDA: ${{ secrets.MYK_ACTION_AGENDA }}
+          MYK_LOGIN_SELECTOR: ${{ secrets.MYK_LOGIN_SELECTOR }}
+          MYK_MENU_SELECTOR: ${{ secrets.MYK_MENU_SELECTOR }}
+          MYK_CALENDAR_SELECTOR: ${{ secrets.MYK_CALENDAR_SELECTOR }}
+          MYK_CLASS_SCHEDULE_SELECTOR: ${{ secrets.MYK_CLASS_SCHEDULE_SELECTOR }}
+          MYK_OBLIGATORY_CLASS_SELECTOR: ${{ secrets.MYK_OBLIGATORY_CLASS_SELECTOR }}
+          ADE_BASE_URL: ${{ secrets.ADE_BASE_URL }}
+          ADE_RESOURCES: ${{ secrets.ADE_RESOURCES }}
+          ADE_PROJECT_ID: ${{ secrets.ADE_PROJECT_ID }}
+          UNESS_BASE_URL: ${{ secrets.UNESS_BASE_URL }}
+          UNESS_ID_UE_CODE: ${{ secrets.UNESS_ID_UE_CODE }}
+        run: python edt_global.py
+
+      - name: Run grouped ICS script
+        run: python edt_split_groups.py
+
+      - name: Setup GitHub Pages branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -B gh-pages
+
+      - name: Add generated ICS files
+        run: |
+          git add *.ics
+          git commit -m "Update ICS files"
+          git push -u origin gh-pages --force
