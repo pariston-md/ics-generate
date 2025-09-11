@@ -50,7 +50,7 @@ jobs:
     # --- Exécuter le script global ---
     - name: Run global calendar script
       run: |
-        python edt_global.py
+        python edt_generate_global.py
 
     # --- Exécuter le script pour créer les ICS de groupes ---
     - name: Run split groups script
