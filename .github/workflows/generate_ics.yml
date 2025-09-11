@@ -3,65 +3,50 @@ name: Generate and Publish ICS
 on:
   schedule:
     - cron: '0 * * * *' # toutes les heures
-  workflow_dispatch: # pour lancer manuellement
+  workflow_dispatch:
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-    # --- Installer les navigateurs Playwright ---
-    - name: Install Playwright browsers
-      run: npx playwright install --with-deps
+      - name: Install Playwright Browsers
+        run: |
+          python -m playwright install
 
-    - name: Create .env file
-      run: |
-        echo "MYK_USERNAME=${{ secrets.MYK_USERNAME }}" >> .env
-        echo "MYK_PASSWORD=${{ secrets.MYK_PASSWORD }}" >> .env
-        echo "MYK_BASE_URL=${{ secrets.MYK_BASE_URL }}" >> .env
-        echo "MYK_API_ENDPOINT=${{ secrets.MYK_API_ENDPOINT }}" >> .env
-        echo "MYK_MODULE_AGENDA=${{ secrets.MYK_MODULE_AGENDA }}" >> .env
-        echo "MYK_ACTION_AGENDA=${{ secrets.MYK_ACTION_AGENDA }}" >> .env
-        echo "MYK_LOGIN_SELECTOR=${{ secrets.MYK_LOGIN_SELECTOR }}" >> .env
-        echo "MYK_MENU_SELECTOR=${{ secrets.MYK_MENU_SELECTOR }}" >> .env
-        echo "MYK_CALENDAR_SELECTOR=${{ secrets.MYK_CALENDAR_SELECTOR }}" >> .env
-        echo "MYK_CLASS_SCHEDULE_SELECTOR=${{ secrets.MYK_CLASS_SCHEDULE_SELECTOR }}" >> .env
-        echo "MYK_OBLIGATORY_CLASS_SELECTOR=${{ secrets.MYK_OBLIGATORY_CLASS_SELECTOR }}" >> .env
-        echo "ADE_BASE_URL=${{ secrets.ADE_BASE_URL }}" >> .env
-        echo "ADE_RESOURCES=${{ secrets.ADE_RESOURCES }}" >> .env
-        echo "ADE_PROJECT_ID=${{ secrets.ADE_PROJECT_ID }}" >> .env
-        echo "UNESS_BASE_URL=${{ secrets.UNESS_BASE_URL }}" >> .env
-        echo "UNESS_ID_UE_CODE=${{ secrets.UNESS_ID_UE_CODE }}" >> .env
+      - name: Create .env file
+        run: |
+          echo "MYK_USERNAME=${{ secrets.MYK_USERNAME }}" >> .env
+          echo "MYK_PASSWORD=${{ secrets.MYK_PASSWORD }}" >> .env
+          # ... toutes les autres variables secrets
 
-    - name: Run global calendar script
-      run: |
-        python edt_generate_global.py
+      - name: Run global calendar script
+        run: python edt_global.py
 
-    - name: Run split groups script
-      run: |
-        python edt_split_groups.py
+      - name: Run split groups script
+        run: python edt_split_groups.py
 
-    - name: Move ICS files to ics folder
-      run: |
-        mkdir -p ics
-        mv *.ics ics/
+      - name: Move ICS files to ics folder
+        run: |
+          mkdir -p ics
+          mv *.ics ics/
 
-    - name: Deploy ICS to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./ics
-        publish_branch: gh-pages
+      - name: Deploy ICS to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # ou GH_PAGES_TOKEN si PAT
+          publish_dir: ./ics
+          publish_branch: gh-pages
