@@ -34,7 +34,7 @@ jobs:
           # ... toutes les autres variables secrets
 
       - name: Run global calendar script
-        run: python edt_general_global.py
+        run: python edt_generate_global.py
 
       - name: Run split groups script
         run: python edt_split_groups.py
