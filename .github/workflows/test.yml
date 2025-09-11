@@ -46,26 +46,13 @@ jobs:
         echo "UNESS_BASE_URL=${{ secrets.UNESS_BASE_URL }}" >> .env
         echo "UNESS_ID_UE_CODE=${{ secrets.UNESS_ID_UE_CODE }}" >> .env
 
-    - name: Debug secrets
+    # --- Vérification du secret UNESS_ID_UE_CODE ---
+    - name: Debug UNESS secret
       run: |
-        echo "UNESS_ID_UE_CODE=${{ secrets.UNESS_ID_UE_CODE }}" | wc -c
-
-    # --- Vérifier que UNESS_ID_UE_CODE est un JSON valide ---
-    - name: Validate UNESS_ID_UE_CODE secret
-      run: |
-        python - <<'EOF'
-        import os, json
-        val = os.getenv("UNESS_ID_UE_CODE")
-        if not val:
-            raise SystemExit("❌ Secret UNESS_ID_UE_CODE manquant ou vide")
-        try:
-            parsed = json.loads(val)
-            if not isinstance(parsed, dict):
-                raise SystemExit("❌ UNESS_ID_UE_CODE doit être un objet JSON (dict)")
-            print("✅ Secret UNESS_ID_UE_CODE est un JSON valide")
-        except Exception as e:
-            raise SystemExit(f"❌ Erreur JSON : {e}")
-        EOF
+        echo "Valeur encodée (brève): ${UNESS_ID_UE_CODE:0:30}..."
+        echo "$UNESS_ID_UE_CODE" | base64 --decode || echo "❌ Erreur de décodage"
+      env:
+        UNESS_ID_UE_CODE: ${{ secrets.UNESS_ID_UE_CODE }}
 
     # --- Exécuter le script global ---
     - name: Run global calendar script
