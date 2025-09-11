@@ -5,6 +5,7 @@ import threading
 import unicodedata
 import requests
 import json
+import base64
 from datetime import datetime, timedelta
 from difflib import SequenceMatcher
 from ics import Calendar, Event
@@ -45,8 +46,9 @@ ade_project_id = os.getenv("ADE_PROJECT_ID")
 
 # UNESS
 uness_base_url = os.getenv("UNESS_BASE_URL")
-uness_id_ue_code_str = os.getenv("UNESS_ID_UE_CODE")  
-ue_to_uness = json.loads(uness_id_ue_code_str)       
+uness_id_ue_code_encoded = os.getenv("UNESS_ID_UE_CODE")  
+uness_id_ue_code_str = base64.b64decode(uness_id_ue_code_encoded).decode("utf-8")
+ue_to_uness = json.loads(uness_id_ue_code_str)
 
 # --- Vérification des variables d'env ---
 required_vars = [
@@ -241,3 +243,4 @@ with open("edt_global.ics", "w", encoding="utf-8") as f:
 
 print("✅ Fichier edt_global.ics généré avec succès !")
 watchdog.cancel()
+
