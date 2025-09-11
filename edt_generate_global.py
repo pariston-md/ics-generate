@@ -72,7 +72,7 @@ mk_end = end_dt.isoformat()
 
 # Dates pour ADE (yyyy-mm-dd)
 ade_start = start_dt.strftime("%Y-%m-%d")
-ade_end = start_dt.strftime("%Y-%m-%d")
+ade_end = end_dt.strftime("%Y-%m-%d")
 ade_url = f"{ade_base_url}?resources={ade_resources}&projectId={ade_project_id}&calType=ical&firstDate={ade_start}&lastDate={ade_end}"
 
 # --- Récupération de l'ICS ADE ---
@@ -243,4 +243,5 @@ with open("edt_global.ics", "w", encoding="utf-8") as f:
 
 print("✅ Fichier edt_global.ics généré avec succès !")
 watchdog.cancel()
+
 
