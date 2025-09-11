@@ -46,6 +46,10 @@ jobs:
         echo "UNESS_BASE_URL=${{ secrets.UNESS_BASE_URL }}" >> .env
         echo "UNESS_ID_UE_CODE=${{ secrets.UNESS_ID_UE_CODE }}" >> .env
 
+    - name: Debug secrets
+      run: |
+        echo "UNESS_ID_UE_CODE=${{ secrets.UNESS_ID_UE_CODE }}" | wc -c
+
     # --- Vérifier que UNESS_ID_UE_CODE est un JSON valide ---
     - name: Validate UNESS_ID_UE_CODE secret
       run: |
