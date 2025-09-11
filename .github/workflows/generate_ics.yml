@@ -10,23 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # --- Checkout du repo ---
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    # --- Configurer Python ---
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
 
-    # --- Installer les dépendances ---
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    # --- Charger les secrets pour .env ---
+    # --- Installer les navigateurs Playwright ---
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps
+
     - name: Create .env file
       run: |
         echo "MYK_USERNAME=${{ secrets.MYK_USERNAME }}" >> .env
@@ -46,23 +46,19 @@ jobs:
         echo "UNESS_BASE_URL=${{ secrets.UNESS_BASE_URL }}" >> .env
         echo "UNESS_ID_UE_CODE=${{ secrets.UNESS_ID_UE_CODE }}" >> .env
 
-    # --- Exécuter le script global ---
     - name: Run global calendar script
       run: |
         python edt_generate_global.py
 
-    # --- Exécuter le script pour créer les ICS de groupes ---
     - name: Run split groups script
       run: |
         python edt_split_groups.py
 
-    # --- Créer le dossier ics si nécessaire ---
     - name: Move ICS files to ics folder
       run: |
         mkdir -p ics
         mv *.ics ics/
 
-    # --- Commit et push vers la branche gh-pages ---
     - name: Deploy ICS to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
