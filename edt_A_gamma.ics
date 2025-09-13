@@ -2,20 +2,12 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Le 19/09/2025 de 13:00 à 15:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG 2 : Précautions standards\,complémentaires et environnement 2/2</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23127</b>
-DTEND:20250919T130000Z
-LOCATION:Non précisée
-DTSTART:20250919T110000Z
-SUMMARY:TPG - TPG 2 : Précautions standards\,complémentaires et environnement 2/2
-UID:a8380c15-03ff-47b3-8b45-f1aabf017559@a838.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 16/09/2025 de 08:15 à 09:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Rôles et attitudes attendus du professionnel de santé - Aspects règlementaires et législatifs</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.11.S1\nUE libellé : Concepts de soins et raisonnement clinique\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23128</b>
-DTEND:20250916T074500Z
-LOCATION:Non précisée
-DTSTART:20250916T061500Z
-SUMMARY:★ CM - Rôles et attitudes attendus du professionnel de santé - Aspects règlementaires et législatifs
-UID:5c90fb38-4474-4268-a9cd-5f33aba719ea@5c90.org
+DESCRIPTION:Le 15/09/2025 de 08:15 à 10:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Anatomie membre supérieur 1/3</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MICHELLAND SANDRA</b>\n\nUE code : 2.01.S1\nUE libellé : Anatomie générale et anatomie des membres\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23119</b>
+DTEND:20250915T081500Z
+LOCATION:IFPS Salle 202\,IFPS Salle 264
+DTSTART:20250915T061500Z
+SUMMARY:★ CM - Anatomie membre supérieur 1/3
+UID:a6a076d0-434a-4d07-a002-4a078c3a9a0e@a6a0.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Le 25/09/2025 de 09:30 à 10:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>SEPI : préparation d'injectables : prérequis et invariants</b>\nGroupe : <b>1/2</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
@@ -23,102 +15,7 @@ DTEND:20250925T083000Z
 LOCATION:IFPS Salle 203
 DTSTART:20250925T073000Z
 SUMMARY:★ TD - SEPI : préparation d'injectables : prérequis et invariants
-UID:67799611-f137-4169-ac0a-367f59f86f66@6779.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 23/09/2025 de 13:15 à 15:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Sociologie 3/3</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>KONAN Guy Raoul</b>\n\nUE code : 1.01.S1\nUE libellé : Psychologie\, sociologie\, anthropologie\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23118</b>
-DTEND:20250923T131500Z
-LOCATION:IFPS Salle 264
-DTSTART:20250923T111500Z
-SUMMARY:★ CM - Sociologie 3/3
-UID:c54deefe-9926-4679-a547-83f77737c48e@c54d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 18/09/2025 de 10:00 à 11:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Explorations radiologiques des membres supérieurs: main\, poignet</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23130</b>
-DTEND:20250918T093000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250918T080000Z
-SUMMARY:★ CM - Explorations radiologiques des membres supérieurs: main\, poignet
-UID:cc69752e-1dc2-41b8-8671-92e0d98919dd@cc69.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 15/09/2025 de 08:15 à 10:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Anatomie membre supérieur 1/3</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MICHELLAND SANDRA</b>\n\nUE code : 2.01.S1\nUE libellé : Anatomie générale et anatomie des membres\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23119</b>
-DTEND:20250915T081500Z
-LOCATION:IFPS Salle 202\,IFPS Salle 264
-DTSTART:20250915T061500Z
-SUMMARY:★ CM - Anatomie membre supérieur 1/3
-UID:8aae5b5f-99a2-4af6-b164-36da5deb2f63@8aae.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 22/09/2025 de 09:00 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Soins liés à la mobilisation\, prévention et traitement des escarres</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
-DTEND:20250922T080000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250922T070000Z
-SUMMARY:★ CM - Soins liés à la mobilisation\, prévention et traitement des escarres
-UID:bbed38c7-0866-495d-8707-388ed94f51af@bbed.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 15/09/2025 de 14:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Election délégués</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n
-DTEND:20250915T133000Z
-LOCATION:Non précisée
-DTSTART:20250915T123000Z
-SUMMARY:★ CM - Election délégués
-UID:592b170f-554a-456f-8514-16f67c6e7d0c@592b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 17/09/2025 de 14:00 à 15:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>TP</b>\nIntitulé : <b>TP 1er pas en radiologie</b>\nGroupe : <b>A</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23130</b>
-DTEND:20250917T130000Z
-LOCATION:IFPS TP 210
-DTSTART:20250917T120000Z
-SUMMARY:★ TP - TP 1er pas en radiologie
-UID:b7c28e95-aaa5-46d1-bfd2-14f4a1cb67af@b7c2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 18/09/2025 de 08:15 à 09:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>Calculs de dose 1/3</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
-DTEND:20250918T074500Z
-LOCATION:IFPS Salle 264
-DTSTART:20250918T061500Z
-SUMMARY:★ TD - Calculs de dose 1/3
-UID:a7e918e6-ac65-4369-a05e-18332120ae90@a7e9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 17/09/2025 de 08:00 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Anatomie membre supérieur 2/3</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MICHELLAND SANDRA</b>\n\nUE code : 2.01.S1\nUE libellé : Anatomie générale et anatomie des membres\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23119</b>
-DTEND:20250917T080000Z
-LOCATION:IFPS Salle 202\,IFPS Salle 264
-DTSTART:20250917T060000Z
-SUMMARY:★ CM - Anatomie membre supérieur 2/3
-UID:762fea0d-aae6-4210-8714-5e1875f392e3@762f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 17/09/2025 de 10:15 à 11:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Caractéristiques de la personne soignée</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.11.S1\nUE libellé : Concepts de soins et raisonnement clinique\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23128</b>
-DTEND:20250917T094500Z
-LOCATION:IFPS Salle 264
-DTSTART:20250917T081500Z
-SUMMARY:★ CM - Caractéristiques de la personne soignée
-UID:4e6aceb3-14c0-4f74-9e9a-d7f252906995@4e6a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 19/09/2025 de 10:00 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Radioactivité 2/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23123</b>
-DTEND:20250919T100000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250919T080000Z
-SUMMARY:★ CM - Radioactivité 2/4
-UID:36fc1362-c1c2-421d-8b3e-837743cec0b8@36fc.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 24/09/2025 de 16:00 à 18:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG TP Interfilières : Cours sur UNESS</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
-DTEND:20250924T160000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250924T140000Z
-SUMMARY:TPG - TPG TP Interfilières : Cours sur UNESS
-UID:5a7f201e-c7eb-47e4-9b83-94fa50c77885@5a7f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 25/09/2025 de 13:30 à 15:30\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>Travail personnel avant TD sémantique médicale</b>\nGroupe : <b>1/2</b>\n\nUE code : 2.05.S1\nUE libellé : Physiologie générale\, physiologie\, sémiologie et pathologie ostéo articulaire\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23122</b>
-DTEND:20250925T133000Z
-DTSTART:20250925T113000Z
-SUMMARY:TPG - Travail personnel avant TD sémantique médicale
-UID:e141eec9-9426-49ad-98a0-b5a6505367f7@e141.org
+UID:750934f1-b2c2-49ca-8125-f21deaab5bb0@7509.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Le 23/09/2025 de 10:30 à 12:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Physique fondamentale 4/6</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>THIBAULT Pierre</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23123</b>
@@ -126,15 +23,15 @@ DTEND:20250923T103000Z
 LOCATION:IFPS Salle 264
 DTSTART:20250923T083000Z
 SUMMARY:★ CM - Physique fondamentale 4/6
-UID:b8f73dd1-f80d-48f8-9b61-e17e91d729d4@b8f7.org
+UID:022d7594-eb46-407b-a60a-50e5d6b33501@022d.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Le 16/09/2025 de 13:00 à 14:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>SEPI : prélèvement et CVP</b>\nGroupe : <b>1/2</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
-DTEND:20250916T120000Z
-LOCATION:IFPS Salle 203
-DTSTART:20250916T110000Z
-SUMMARY:★ TD - SEPI : prélèvement et CVP
-UID:31b0867f-be67-4d96-be45-cb4f34f7cd00@31b0.org
+DESCRIPTION:Le 24/09/2025 de 16:00 à 18:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG TP Interfilières : Cours sur UNESS</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
+DTEND:20250924T160000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250924T140000Z
+SUMMARY:TPG - TPG TP Interfilières : Cours sur UNESS
+UID:51cfae2e-a67b-4800-be88-f3baf046542e@51cf.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Le 22/09/2025 de 13:00 à 15:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Technologie radiologie de projection 1/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 3.02.S1\nUE libellé : Physique appliquée et technologie en imagerie radiologique\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23125</b>
@@ -142,134 +39,23 @@ DTEND:20250922T130000Z
 LOCATION:IFPS Salle 264
 DTSTART:20250922T110000Z
 SUMMARY:★ CM - Technologie radiologie de projection 1/4
-UID:8b12125a-47db-4c8f-8786-2228389e0813@8b12.org
+UID:a072ca07-c642-40ca-aeda-69f163f394e4@a072.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Le 24/09/2025 de 10:15 à 12:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Anatomie membre supérieur 3/3</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>MICHELLAND SANDRA</b>\n\nUE code : 2.01.S1\nUE libellé : Anatomie générale et anatomie des membres\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23119</b>
-DTEND:20250924T101500Z
-LOCATION:IFPS Salle 202\,IFPS Salle 264
-DTSTART:20250924T081500Z
-SUMMARY:★ CM - Anatomie membre supérieur 3/3
-UID:758909b5-34e5-4e81-a032-ccf03d3e2e05@7589.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 24/09/2025 de 08:30 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Explorations radiologiques des membres supérieurs : coude\, clavicule</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23130</b>
-DTEND:20250924T080000Z
-LOCATION:IFPS Salle 202\,IFPS Salle 264
-DTSTART:20250924T063000Z
-SUMMARY:★ CM - Explorations radiologiques des membres supérieurs : coude\, clavicule
-UID:a67f5c9e-05df-4582-9c31-fa8b2694071c@a67f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 15/09/2025 de 13:30 à 14:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Consignes TP Interfilières</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
-DTEND:20250915T121500Z
+DESCRIPTION:Le 17/09/2025 de 10:15 à 11:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Caractéristiques de la personne soignée</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.11.S1\nUE libellé : Concepts de soins et raisonnement clinique\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23128</b>
+DTEND:20250917T094500Z
 LOCATION:IFPS Salle 264
-DTSTART:20250915T113000Z
-SUMMARY:★ CM - Consignes TP Interfilières
-UID:42f3d40e-2695-4cc9-bae8-60e719d8d13f@42f3.org
+DTSTART:20250917T081500Z
+SUMMARY:★ CM - Caractéristiques de la personne soignée
+UID:fa3fb387-02eb-4157-970e-db31b349ddc8@fa3f.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Le 22/09/2025 de 15:00 à 17:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG : préparation d'injectables : prérequis et invariants</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
-DTEND:20250922T150000Z
+DESCRIPTION:Le 19/09/2025 de 13:00 à 15:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG 2 : Précautions standards\,complémentaires et environnement 2/2</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23127</b>
+DTEND:20250919T130000Z
 LOCATION:Non précisée
-DTSTART:20250922T130000Z
-SUMMARY:TPG - TPG : préparation d'injectables : prérequis et invariants
-UID:24413b40-350f-4a5d-833f-0a832cdaeade@2441.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 24/09/2025 de 13:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>Hygiène : quizz précautions standards et complémentaires</b>\nGroupe : <b>1/2</b>\nIntervenant(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23127</b>
-DTEND:20250924T133000Z
-LOCATION:IFPS Salle 203
-DTSTART:20250924T113000Z
-SUMMARY:★ TD - Hygiène : quizz précautions standards et complémentaires
-UID:76a8b3ee-3099-4414-830f-548e59865b20@76a8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 15/09/2025 de 16:00 à 18:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG 2 : Précautions standards\,complémentaires et environnement 1/2</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23127</b>
-DTEND:20250915T160000Z
-LOCATION:IFPS Salle 202\,IFPS Salle 264
-DTSTART:20250915T140000Z
-SUMMARY:TPG - TPG 2 : Précautions standards\,complémentaires et environnement 1/2
-UID:641ee9bf-cce5-4c30-911d-cd3d8315f274@641e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 26/09/2025 de 08:15 à 10:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Radioactivité 3/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23123</b>
-DTEND:20250926T081500Z
-LOCATION:IFPS Salle 264
-DTSTART:20250926T061500Z
-SUMMARY:★ CM - Radioactivité 3/4
-UID:ce6c3d12-becd-4e47-b323-1f838c81499a@ce6c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 15/09/2025 de 10:30 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Concept du bien être en fonction du contexte et de la culture: dignité\, pudeur\, intimité</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
-DTEND:20250915T100000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250915T083000Z
-SUMMARY:★ CM - Concept du bien être en fonction du contexte et de la culture: dignité\, pudeur\, intimité
-UID:a557ca0a-72d7-477c-8937-3cbcc2dd1270@a557.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 23/09/2025 de 16:00 à 18:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>TPG TP Interfilières : Cours sur UNESS</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
-DTEND:20250923T160000Z
-LOCATION:Non précisée
-DTSTART:20250923T140000Z
-SUMMARY:★ CM - TPG TP Interfilières : Cours sur UNESS
-UID:af403983-f863-400c-a64b-071af26b8e9f@af40.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 22/09/2025 de 10:15 à 11:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>Calculs de dose 2/3</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
-DTEND:20250922T094500Z
-LOCATION:IFPS Salle 264
-DTSTART:20250922T081500Z
-SUMMARY:★ TD - Calculs de dose 2/3
-UID:b9f8d354-0510-40ef-acce-73245f8b0f31@b9f8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 16/09/2025 de 10:00 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Physique fondamentale 3/6</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>THIBAULT Pierre</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23123</b>
-DTEND:20250916T100000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250916T080000Z
-SUMMARY:★ CM - Physique fondamentale 3/6
-UID:bce9f79a-46ca-4a3c-baa7-5f41b2d2ecb4@bce9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 18/09/2025 de 13:00 à 15:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Sociologie 2/3</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>KONAN Guy Raoul</b>\n\nUE code : 1.01.S1\nUE libellé : Psychologie\, sociologie\, anthropologie\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23118</b>
-DTEND:20250918T130000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250918T110000Z
-SUMMARY:★ CM - Sociologie 2/3
-UID:368c8554-4a0a-4847-840b-943d4e4820a1@368c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 16/09/2025 de 15:00 à 16:30\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>Mischool</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 5.01.S1\nUE libellé : Anglais\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23131</b>
-DTEND:20250916T143000Z
-DTSTART:20250916T130000Z
-SUMMARY:TPG - Mischool
-UID:eb614acf-4fdf-4b32-9965-a7f98b1465d6@eb61.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 26/09/2025 de 13:00 à 16:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG Révisions avant TP radio membre sup</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23130</b>
-DTEND:20250926T140000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250926T110000Z
-SUMMARY:TPG - TPG Révisions avant TP radio membre sup
-UID:b2aa3eb7-5233-4d2e-bf11-28d9f77550a7@b2aa.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 26/09/2025 de 10:30 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Explorations radiologiques des membres supérieurs : épaule</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23130</b>
-DTEND:20250926T100000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250926T083000Z
-SUMMARY:★ CM - Explorations radiologiques des membres supérieurs : épaule
-UID:5f8c6e3c-7649-45ba-a7e8-f8307198c4ba@5f8c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 19/09/2025 de 08:30 à 10:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>Vieillissement physiologique - (Vidéos UNESS)</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 2.05.S1\nUE libellé : Physiologie générale\, physiologie\, sémiologie et pathologie ostéo articulaire\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23122</b>
-DTEND:20250919T080000Z
-LOCATION:Non précisée
-DTSTART:20250919T063000Z
-SUMMARY:TPG - Vieillissement physiologique - (Vidéos UNESS)
-UID:707aa8e7-3272-4e5c-b0ca-811f28d70eb2@707a.org
+DTSTART:20250919T110000Z
+SUMMARY:TPG - TPG 2 : Précautions standards\,complémentaires et environnement 2/2
+UID:a7f56f46-a69f-4871-8de7-c50ee62bf368@a7f5.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Le 23/09/2025 de 08:30 à 10:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Biologie : Les molécules constitutives du vivant et leur fonction dans les équilibres ou déséquilibres biologiques 1/2</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>LARDY Bernard</b>\n\nUE code : 2.04.S1\nUE libellé : Biologie cellulaire et moléculaire\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23120</b>
@@ -277,6 +63,220 @@ DTEND:20250923T083000Z
 LOCATION:Non précisée
 DTSTART:20250923T063000Z
 SUMMARY:★ CM - Biologie : Les molécules constitutives du vivant et leur fonction dans les équilibres ou déséquilibres biologiques 1/2
-UID:e1c73eb2-b201-4c94-83e9-9ffd9eb44553@e1c7.org
+UID:1886f694-7218-4f3e-ac61-f2db5c223bf8@1886.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 26/09/2025 de 08:15 à 10:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Radioactivité 3/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23123</b>
+DTEND:20250926T081500Z
+LOCATION:IFPS Salle 264
+DTSTART:20250926T061500Z
+SUMMARY:★ CM - Radioactivité 3/4
+UID:0607eeaf-542b-4676-8424-9f12abef754c@0607.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 16/09/2025 de 13:00 à 14:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>SEPI : prélèvement et CVP</b>\nGroupe : <b>1/2</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
+DTEND:20250916T120000Z
+LOCATION:IFPS Salle 203
+DTSTART:20250916T110000Z
+SUMMARY:★ TD - SEPI : prélèvement et CVP
+UID:5efefc93-57c8-44a8-bf78-d40c29f27afa@5efe.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 16/09/2025 de 10:00 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Physique fondamentale 3/6</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>THIBAULT Pierre</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23123</b>
+DTEND:20250916T100000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250916T080000Z
+SUMMARY:★ CM - Physique fondamentale 3/6
+UID:802d15b0-c591-48a5-8e1d-51289f465e11@802d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 15/09/2025 de 13:30 à 14:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Consignes TP Interfilières</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
+DTEND:20250915T121500Z
+LOCATION:IFPS Salle 264
+DTSTART:20250915T113000Z
+SUMMARY:★ CM - Consignes TP Interfilières
+UID:8cebed49-9944-43b3-b9c5-be80856f4c6b@8ceb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 24/09/2025 de 08:30 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Explorations radiologiques des membres supérieurs : coude\, clavicule</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23130</b>
+DTEND:20250924T080000Z
+LOCATION:IFPS Salle 202\,IFPS Salle 264
+DTSTART:20250924T063000Z
+SUMMARY:★ CM - Explorations radiologiques des membres supérieurs : coude\, clavicule
+UID:c19f6ca1-8de9-4600-b8f2-440bab823333@c19f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 18/09/2025 de 13:00 à 15:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Sociologie 2/3</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>KONAN Guy Raoul</b>\n\nUE code : 1.01.S1\nUE libellé : Psychologie\, sociologie\, anthropologie\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23118</b>
+DTEND:20250918T130000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250918T110000Z
+SUMMARY:★ CM - Sociologie 2/3
+UID:2b172e05-6345-440d-9ddf-d6dc5eb1160a@2b17.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 16/09/2025 de 08:15 à 09:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Rôles et attitudes attendus du professionnel de santé - Aspects règlementaires et législatifs</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.11.S1\nUE libellé : Concepts de soins et raisonnement clinique\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23128</b>
+DTEND:20250916T074500Z
+LOCATION:Non précisée
+DTSTART:20250916T061500Z
+SUMMARY:★ CM - Rôles et attitudes attendus du professionnel de santé - Aspects règlementaires et législatifs
+UID:565102f1-9463-485b-88a2-82d5020f9cda@5651.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 22/09/2025 de 09:00 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Soins liés à la mobilisation\, prévention et traitement des escarres</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
+DTEND:20250922T080000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250922T070000Z
+SUMMARY:★ CM - Soins liés à la mobilisation\, prévention et traitement des escarres
+UID:4fd1b3df-b588-448b-9947-d43d386b6065@4fd1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 19/09/2025 de 10:00 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Radioactivité 2/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23123</b>
+DTEND:20250919T100000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250919T080000Z
+SUMMARY:★ CM - Radioactivité 2/4
+UID:fd706fc3-262b-404f-87a3-ee43ddd3d71b@fd70.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 26/09/2025 de 10:30 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Explorations radiologiques des membres supérieurs : épaule</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23130</b>
+DTEND:20250926T100000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250926T083000Z
+SUMMARY:★ CM - Explorations radiologiques des membres supérieurs : épaule
+UID:6ff24134-bfe5-4441-a6b8-6df1ae7c30b1@6ff2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 17/09/2025 de 14:00 à 15:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>TP</b>\nIntitulé : <b>TP 1er pas en radiologie</b>\nGroupe : <b>A</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23130</b>
+DTEND:20250917T130000Z
+LOCATION:IFPS TP 210
+DTSTART:20250917T120000Z
+SUMMARY:★ TP - TP 1er pas en radiologie
+UID:331be1c4-a6cb-4870-8d2d-384e513010d7@331b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 15/09/2025 de 14:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Election délégués</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n
+DTEND:20250915T133000Z
+LOCATION:Non précisée
+DTSTART:20250915T123000Z
+SUMMARY:★ CM - Election délégués
+UID:c91fb82a-c1b8-40bf-81e6-a265bd204d59@c91f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 25/09/2025 de 13:30 à 15:30\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>Travail personnel avant TD sémantique médicale</b>\nGroupe : <b>1/2</b>\n\nUE code : 2.05.S1\nUE libellé : Physiologie générale\, physiologie\, sémiologie et pathologie ostéo articulaire\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23122</b>
+DTEND:20250925T133000Z
+DTSTART:20250925T113000Z
+SUMMARY:TPG - Travail personnel avant TD sémantique médicale
+UID:a83f0df0-d0ea-45af-86b3-f46233823dc1@a83f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 16/09/2025 de 15:00 à 16:30\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>Mischool</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 5.01.S1\nUE libellé : Anglais\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23131</b>
+DTEND:20250916T143000Z
+DTSTART:20250916T130000Z
+SUMMARY:TPG - Mischool
+UID:f503d73c-db10-4112-9eb1-744f38a00f90@f503.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 22/09/2025 de 10:15 à 11:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>Calculs de dose 2/3</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
+DTEND:20250922T094500Z
+LOCATION:IFPS Salle 264
+DTSTART:20250922T081500Z
+SUMMARY:★ TD - Calculs de dose 2/3
+UID:4d3b3952-4f82-475c-8006-0b885c9a416e@4d3b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 24/09/2025 de 10:15 à 12:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Anatomie membre supérieur 3/3</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>MICHELLAND SANDRA</b>\n\nUE code : 2.01.S1\nUE libellé : Anatomie générale et anatomie des membres\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23119</b>
+DTEND:20250924T101500Z
+LOCATION:IFPS Salle 202\,IFPS Salle 264
+DTSTART:20250924T081500Z
+SUMMARY:★ CM - Anatomie membre supérieur 3/3
+UID:66ce67f5-31f4-4311-9878-69dbfc492786@66ce.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 24/09/2025 de 13:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>Hygiène : quizz précautions standards et complémentaires</b>\nGroupe : <b>1/2</b>\nIntervenant(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23127</b>
+DTEND:20250924T133000Z
+LOCATION:IFPS Salle 203
+DTSTART:20250924T113000Z
+SUMMARY:★ TD - Hygiène : quizz précautions standards et complémentaires
+UID:e3c2cdd8-03d0-4582-91e1-2912847b0704@e3c2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 23/09/2025 de 13:15 à 15:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Sociologie 3/3</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>KONAN Guy Raoul</b>\n\nUE code : 1.01.S1\nUE libellé : Psychologie\, sociologie\, anthropologie\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23118</b>
+DTEND:20250923T131500Z
+LOCATION:IFPS Salle 264
+DTSTART:20250923T111500Z
+SUMMARY:★ CM - Sociologie 3/3
+UID:9ef00a60-3265-4ab0-a19a-079b00d26642@9ef0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 19/09/2025 de 08:30 à 10:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>Vieillissement physiologique - (Vidéos UNESS)</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 2.05.S1\nUE libellé : Physiologie générale\, physiologie\, sémiologie et pathologie ostéo articulaire\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23122</b>
+DTEND:20250919T080000Z
+LOCATION:Non précisée
+DTSTART:20250919T063000Z
+SUMMARY:TPG - Vieillissement physiologique - (Vidéos UNESS)
+UID:2f0cb3ae-66cc-44ac-9dd7-9c4206be7f2d@2f0c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 26/09/2025 de 13:00 à 16:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG Révisions avant TP radio membre sup</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23130</b>
+DTEND:20250926T140000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250926T110000Z
+SUMMARY:TPG - TPG Révisions avant TP radio membre sup
+UID:fd926714-9941-44a5-9add-207f2f2ef6b2@fd92.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 18/09/2025 de 10:00 à 11:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Explorations radiologiques des membres supérieurs: main\, poignet</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23130</b>
+DTEND:20250918T093000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250918T080000Z
+SUMMARY:★ CM - Explorations radiologiques des membres supérieurs: main\, poignet
+UID:39e05f6f-72d0-433b-a9d5-4b98bb772ea4@39e0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 15/09/2025 de 10:30 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Concept du bien être en fonction du contexte et de la culture: dignité\, pudeur\, intimité</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
+DTEND:20250915T100000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250915T083000Z
+SUMMARY:★ CM - Concept du bien être en fonction du contexte et de la culture: dignité\, pudeur\, intimité
+UID:fc05150d-646b-4179-ab3a-7cb51525fa0d@fc05.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 22/09/2025 de 15:00 à 17:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG : préparation d'injectables : prérequis et invariants</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
+DTEND:20250922T150000Z
+LOCATION:Non précisée
+DTSTART:20250922T130000Z
+SUMMARY:TPG - TPG : préparation d'injectables : prérequis et invariants
+UID:aae0bafe-4525-41ee-848d-94d826e53a31@aae0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 17/09/2025 de 08:00 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Anatomie membre supérieur 2/3</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MICHELLAND SANDRA</b>\n\nUE code : 2.01.S1\nUE libellé : Anatomie générale et anatomie des membres\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23119</b>
+DTEND:20250917T080000Z
+LOCATION:IFPS Salle 202\,IFPS Salle 264
+DTSTART:20250917T060000Z
+SUMMARY:★ CM - Anatomie membre supérieur 2/3
+UID:a2b767f1-e980-422d-a127-a6e9a9fcd141@a2b7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 15/09/2025 de 16:00 à 18:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG 2 : Précautions standards\,complémentaires et environnement 1/2</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23127</b>
+DTEND:20250915T160000Z
+LOCATION:IFPS Salle 202\,IFPS Salle 264
+DTSTART:20250915T140000Z
+SUMMARY:TPG - TPG 2 : Précautions standards\,complémentaires et environnement 1/2
+UID:fbc1e24d-d1c6-4e71-b4db-631fd8768c8b@fbc1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 23/09/2025 de 16:00 à 18:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>TPG TP Interfilières : Cours sur UNESS</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
+DTEND:20250923T160000Z
+LOCATION:Non précisée
+DTSTART:20250923T140000Z
+SUMMARY:★ CM - TPG TP Interfilières : Cours sur UNESS
+UID:dc1c4123-27af-4484-af1d-556f2f4cbe3d@dc1c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 18/09/2025 de 08:15 à 09:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>Calculs de dose 1/3</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins\nLien UNESS : <b>https://formation.uness.fr/formation/course/view.php?id=23129</b>
+DTEND:20250918T074500Z
+LOCATION:IFPS Salle 264
+DTSTART:20250918T061500Z
+SUMMARY:★ TD - Calculs de dose 1/3
+UID:d6ab2510-7632-4dd2-b02f-0862784f8b82@d6ab.org
 END:VEVENT
 END:VCALENDAR
