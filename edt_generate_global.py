@@ -147,24 +147,68 @@ def clean_text(text: str) -> str:
     text = text.replace("\r", "").replace("\n", " - ")
     return text.strip()
 
-def nettoyer_titre_ade(titre: str) -> str:
-    return re.sub(r"^l\d\s\w+\s*", "", normalize(titre))
+# --- Nouvelle logique de matching ADE ---
+STOPWORDS_FR = {
+    "de", "du", "des", "le", "la", "les", "un", "une", "en", "au", "aux", 
+    "pour", "par", "dans", "sur", "avec", "et", "ou", "à", "d'", "l'", "chez"
+}
 
-def trouver_salle_ade(cours_mk: dict, ade_events: list, seuil: float = 0.3) -> str:
+def nettoyer_intitule(titre: str) -> str:
+    if not titre:
+        return ""
+    titre_clean = re.sub(r"l\d\sifmem.*?ue\s*\d+(\.\d+)?", "", titre, flags=re.IGNORECASE)
+    titre_clean = normalize(titre_clean)
+    mots = [m for m in re.findall(r"\w+", titre_clean) if m not in STOPWORDS_FR]
+    return " ".join(mots)
+
+def extraire_type_cours(titre: str) -> str:
+    titre_norm = titre.upper()
+    types_possibles = ["CM OBL", "C/TD", "CM", "TD", "TPG", "TP", "TP INTERFILIERES", "TPG MISCHOOL"]
+    for t in types_possibles:
+        if re.search(r'[\s\-]*' + re.escape(t) + r'[\s\-]*', titre_norm):
+            return t
+    return ""
+
+def trouver_salle_ade(cours_mk: dict, ade_events: list, seuil_similarite: float = 0.3) -> str:
+    dt_mk_start = datetime.fromisoformat(cours_mk["start"])
+    ue_code = strip_html(cours_mk.get("UE_CODE", "")).lower()
     intitule_mk = strip_html(cours_mk.get("INTITULE", ""))
-    mk_title_norm = normalize(intitule_mk)
-    dt_mk = datetime.fromisoformat(cours_mk["start"])
-    meilleur_score = 0
-    salle_trouvee = "Non précisée"
-    for ade in ade_events:
-        if ade["start"].date() != dt_mk.date():
-            continue
-        ade_title_norm = nettoyer_titre_ade(ade["summary"])
-        score = SequenceMatcher(None, mk_title_norm, ade_title_norm).ratio()
+    type_mk = extraire_type_cours(intitule_mk)
+
+    intitule_mk_clean = nettoyer_intitule(intitule_mk)
+
+    if not ue_code:
+        return "Non précisée"
+
+    candidats = [ade for ade in ade_events if ade["start"].date() == dt_mk_start.date()]
+    if not candidats:
+        return "Non précisée"
+
+    candidats = [ade for ade in candidats if ue_code in ade["summary"].lower()]
+    if not candidats:
+        return "Non précisée"
+
+    meilleur_score = -1
+    meilleure_salle = "Non précisée"
+
+    for ade in candidats:
+        ade_title = ade["summary"]
+        ade_type = extraire_type_cours(ade_title)
+        ade_title_clean = nettoyer_intitule(ade_title)
+
+        sim_intitule = SequenceMatcher(None, intitule_mk_clean, ade_title_clean).ratio()
+        type_bonus = 0.3 if type_mk and ade_type and type_mk == ade_type else 0
+
+        diff_minutes = abs((ade["start"] - dt_mk_start).total_seconds()) / 60
+        horaire_bonus = 0.1 if diff_minutes < 30 else 0
+
+        score = sim_intitule * 0.6 + type_bonus + horaire_bonus
+
         if score > meilleur_score:
             meilleur_score = score
-            salle_trouvee = ade.get("location", "Non précisée")
-    return salle_trouvee if meilleur_score >= seuil else "Non précisée"
+            meilleure_salle = ade.get("location", "Non précisée")
+
+    return meilleure_salle if meilleur_score >= seuil_similarite else "Non précisée"
 
 # --- Création du calendrier fusionné ---
 final_cal = Calendar()
@@ -177,7 +221,6 @@ for cours in content:
     type_cours = clean_text(cours.get("TYPE_COURS", "")).strip("- ")
     intitule = clean_text(cours.get("INTITULE", ""))
 
-    # Détection cours obligatoire
     title_html = cours.get("title", "")
     cours["obligatoire"] = False
     if title_html:
@@ -188,13 +231,11 @@ for cours in content:
     prefix = "★ " if cours.get("obligatoire") else ""
     e.name = f"{prefix}{type_cours} - {intitule}"
 
-    # Dates
     start_dt = datetime.fromisoformat(cours["start"])
     end_dt = datetime.fromisoformat(cours["end"])
     e.begin = tz_paris.localize(start_dt)
     e.end = tz_paris.localize(end_dt)
 
-    # Description
     description_parts = [
         f"Le {start_dt.strftime('%d/%m/%Y')} de {start_dt.strftime('%H:%M')} à {end_dt.strftime('%H:%M')}",
         f"Cours obligatoire : <b>{'Oui' if cours.get('obligatoire') else 'Non'}</b>"
@@ -224,7 +265,6 @@ for cours in content:
     if cours.get("UE_LIBE"):
         description_parts.append(f"UE libellé : {strip_html(cours['UE_LIBE'])}")
 
-    # UNESS
     if ue_code_clean in ue_to_uness:
         uness_id = ue_to_uness[ue_code_clean]
         description_parts.append(f"Lien UNESS : <b>{uness_base_url}?id={uness_id}</b>")
@@ -243,5 +283,3 @@ with open("edt_global.ics", "w", encoding="utf-8") as f:
 
 print("✅ Fichier edt_global.ics généré avec succès !")
 watchdog.cancel()
-
-
