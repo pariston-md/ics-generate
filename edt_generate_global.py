@@ -127,6 +127,10 @@ try:
             }
         )
         content = response.json()
+        import pprint
+        pprint.pprint(content[0])
+        sys.exit()
+
 
 except PlaywrightTimeoutError as e:
     raise RuntimeError(f"⏳ Timeout Playwright : {e}")
@@ -283,3 +287,4 @@ with open("edt_global.ics", "w", encoding="utf-8") as f:
 
 print("✅ Fichier edt_global.ics généré avec succès !")
 watchdog.cancel()
+
