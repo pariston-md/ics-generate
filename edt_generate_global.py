@@ -44,18 +44,12 @@ ade_base_url = os.getenv("ADE_BASE_URL")
 ade_resources = os.getenv("ADE_RESOURCES")
 ade_project_id = os.getenv("ADE_PROJECT_ID")
 
-# UNESS
-uness_base_url = os.getenv("UNESS_BASE_URL")
-uness_id_ue_code_encoded = os.getenv("UNESS_ID_UE_CODE")  
-uness_id_ue_code_str = base64.b64decode(uness_id_ue_code_encoded).decode("utf-8")
-ue_to_uness = json.loads(uness_id_ue_code_str)
-
 # --- Vérification des variables d'env ---
 required_vars = [
     myk_username, myk_password, myk_base_url, myk_api_endpoint, myk_module_agenda,
     myk_action_agenda, myk_login_selector, myk_menu_selector, myk_calendar_selector,
     myk_class_schedule_selector, myk_obligatory_class_selector,
-    ade_base_url, ade_resources, ade_project_id, uness_base_url, uness_id_ue_code_str
+    ade_base_url, ade_resources, ade_project_id
 ]
 
 if not all(required_vars):
@@ -64,7 +58,7 @@ if not all(required_vars):
 # --- Définition des dates dynamiques ---
 tz_paris = pytz.timezone("Europe/Paris")
 start_dt = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0, tzinfo=tz_paris)
-end_dt = start_dt + timedelta(days=14)
+end_dt = start_dt + timedelta(days=5)
 
 # Dates pour MyKomunoté (ISO avec fuseau)
 mk_start = start_dt.isoformat()
@@ -90,6 +84,10 @@ ade_events = [
     }
     for component in ade_cal.walk() if component.name == "VEVENT"
 ]
+with open("ade.json", "w", encoding="utf-8") as f:
+    json.dump(ade_events, f, ensure_ascii=False, indent=2, default=str)
+
+print("✅ Fichier ade.json généré avec succès !")
 
 # --- Connexion à MyKomunoté et récupération JSON ---
 content = []
@@ -127,6 +125,11 @@ try:
             }
         )
         content = response.json()
+    with open("mykomu.json", "w", encoding="utf-8") as f:
+        json.dump(content, f, ensure_ascii=False, indent=2, default=str)
+
+    print("✅ Fichier mykomu.json généré avec succès !")
+
 
 except PlaywrightTimeoutError as e:
     raise RuntimeError(f"⏳ Timeout Playwright : {e}")
@@ -134,108 +137,234 @@ except Exception as e:
     raise RuntimeError(f"❌ Erreur Playwright : {e}")
 
 # --- Fonctions utilitaires ---
-def normalize(s: str) -> str:
-    return unicodedata.normalize("NFD", s).encode("ascii", "ignore").decode("utf-8").lower() if s else ""
 
+from collections import Counter
+from difflib import SequenceMatcher
+from datetime import datetime
+import re
+import unicodedata
+from scipy.optimize import linear_sum_assignment
+import numpy as np
+
+# --- Fonctions utilitaires (inchangées sauf ajustement petits bugs) ---
+def clean_text(text: str) -> str: 
+    if not text: 
+        return "" 
+    text = strip_html(text) 
+    text = text.replace("\r", "").replace("\n", " - ") 
+    return text.strip()
+
+import re
+import unicodedata
+from difflib import SequenceMatcher
+from collections import Counter
+from datetime import datetime
+import numpy as np
+import itertools
+
+# --- utilitaires déjà présents ---
 def strip_html(text: str) -> str:
     return re.sub(r"<.*?>", "", text).strip() if text else ""
 
-def clean_text(text: str) -> str:
-    if not text:
+def enlever_accents(txt: str) -> str:
+    return ''.join(
+        c for c in unicodedata.normalize('NFD', txt)
+        if unicodedata.category(c) != 'Mn'
+    )
+
+def normaliser_texte(txt: str) -> str:
+    txt = re.sub(r"<.*?>", " ", txt)          
+    txt = enlever_accents(txt)                
+    txt = txt.lower()
+    txt = re.sub(r"[^\w\s]", " ", txt)        
+    txt = re.sub(r"\b(td|cm|ue|obligatoire|gr\d+|l\d+|ifmem)\b", " ", txt)
+    txt = re.sub(r"\s+", " ", txt).strip()
+    return txt
+
+def normaliser_ue_code(code: str) -> str:
+    """Ex: 3.02 -> 3.2, 04.01 -> 4.1"""
+    if not code:
         return ""
-    text = strip_html(text)
-    text = text.replace("\r", "").replace("\n", " - ")
-    return text.strip()
+    parts = code.split(".")
+    parts = [str(int(p)) for p in parts if p.isdigit()]
+    return ".".join(parts)
 
-def nettoyer_titre_ade(titre: str) -> str:
-    return re.sub(r"^l\d\s\w+\s*", "", normalize(titre))
+def extraire_ue_code_mk(cours_mk: dict) -> str:
+    raw = cours_mk.get("UE_CODE", "")
+    m = re.search(r"UE\s*:\s*([\d.]+)", raw)
+    return normaliser_ue_code(m.group(1)) if m else ""
 
-def trouver_salle_ade(cours_mk: dict, ade_events: list, seuil: float = 0.3) -> str:
-    intitule_mk = strip_html(cours_mk.get("INTITULE", ""))
-    mk_title_norm = normalize(intitule_mk)
-    dt_mk = datetime.fromisoformat(cours_mk["start"])
-    meilleur_score = 0
-    salle_trouvee = "Non précisée"
-    for ade in ade_events:
-        if ade["start"].date() != dt_mk.date():
-            continue
-        ade_title_norm = nettoyer_titre_ade(ade["summary"])
-        score = SequenceMatcher(None, mk_title_norm, ade_title_norm).ratio()
-        if score > meilleur_score:
-            meilleur_score = score
-            salle_trouvee = ade.get("location", "Non précisée")
-    return salle_trouvee if meilleur_score >= seuil else "Non précisée"
+def extraire_ue_code_ade(summary: str) -> str:
+    m = re.search(r"UE\s*([\d.]+)", summary)
+    return normaliser_ue_code(m.group(1)) if m else ""
+
+def similarite_tokens(mk_tokens, ade_tokens, poids_mots=None) -> float:
+    matches, poids_total = 0, 0
+    for mk in mk_tokens:
+        poids = poids_mots.get(mk, 1) if poids_mots else 1
+        poids_total += poids
+        for ade in ade_tokens:
+            ratio = SequenceMatcher(None, mk, ade).ratio()
+            if ratio >= 0.7:
+                matches += poids
+                break
+    return matches / poids_total if poids_total > 0 else 0
+
+def calculer_poids_mots(cours_mk_du_jour, cours_ade_du_jour):
+    all_tokens = []
+    for c in cours_mk_du_jour:
+        all_tokens += normaliser_texte(strip_html(c.get("INTITULE",""))).split()
+    for c in cours_ade_du_jour:
+        all_tokens += normaliser_texte(c["summary"]).split()
+
+    freq = Counter(all_tokens)
+    poids = {tok: 1/freq[tok] for tok in freq}
+    return poids
+
+# --- matching global sans scipy (bruteforce car peu de cours par jour) ---
+def matcher_cours_journee(cours_mk_du_jour, cours_ade_du_jour, seuil=0.2):
+    if not cours_mk_du_jour or not cours_ade_du_jour:
+        return {}
+
+    poids_mots = calculer_poids_mots(cours_mk_du_jour, cours_ade_du_jour)
+
+    n_mk = len(cours_mk_du_jour)
+    n_ade = len(cours_ade_du_jour)
+    score_matrix = np.zeros((n_mk, n_ade))
+
+    for i, mk in enumerate(cours_mk_du_jour):
+        mk_tokens = normaliser_texte(strip_html(mk.get("INTITULE",""))).split()
+        ue_mk = extraire_ue_code_mk(mk)
+        dt_mk_start = datetime.fromisoformat(mk["start"])
+        dt_mk_end = datetime.fromisoformat(mk["end"])
+
+        for j, ade in enumerate(cours_ade_du_jour):
+            ade_tokens = normaliser_texte(ade["summary"]).split()
+            score = similarite_tokens(mk_tokens, ade_tokens, poids_mots)
+
+            # Bonus UE identique
+            ue_ade = extraire_ue_code_ade(ade["summary"])
+            if ue_mk and ue_mk == ue_ade:
+                score += 0.5  # bonus renforcé
+
+            # Bonus si même jour (même sans la même heure)
+            if ade["start"].date() == dt_mk_start.date():
+                score += 0.1
+
+            # Bonus horaires exacts
+            if (ade["start"].time() == dt_mk_start.time() and
+                ade["end"].time() == dt_mk_end.time()):
+                score += 0.2
+
+            score_matrix[i, j] = score
+
+    # --- DEBUG : afficher les scores ---
+    date_jour = datetime.fromisoformat(cours_mk_du_jour[0]["start"]).date()
+    print(f"\n=== Matching du {date_jour} ===")
+    for i, mk in enumerate(cours_mk_du_jour):
+        mk_title = strip_html(mk.get("INTITULE",""))
+        print(f"\nCours MyKomu {i}: {mk_title}")
+        for j, ade in enumerate(cours_ade_du_jour):
+            ade_title = ade["summary"]
+            print(f"   -> ADE {j}: {ade_title} | score={score_matrix[i,j]:.2f}")
+
+    # --- Appariement bruteforce (permutations) ---
+    best_perm, best_score = None, -1
+    for perm in itertools.permutations(range(n_ade), min(n_mk, n_ade)):
+        total = sum(score_matrix[i, j] for i, j in enumerate(perm))
+        if total > best_score:
+            best_score = total
+            best_perm = perm
+
+    mapping = {}
+    for i, j in enumerate(best_perm):
+        if score_matrix[i, j] >= seuil:
+            mapping[i] = cours_ade_du_jour[j].get("location", "Non précisée")
+        else:
+            mapping[i] = "Non précisée"
+
+    return mapping
+
+
+
+
 
 # --- Création du calendrier fusionné ---
 final_cal = Calendar()
 
-for cours in content:
-    if not isinstance(cours, dict):
-        continue
+# Récupération de toutes les dates distinctes dans MyKomu
+dates_jours = sorted(set(datetime.fromisoformat(c["start"]).date() for c in content if isinstance(c, dict)))
 
-    e = Event()
-    type_cours = clean_text(cours.get("TYPE_COURS", "")).strip("- ")
-    intitule = clean_text(cours.get("INTITULE", ""))
+for date_jour in dates_jours:
+    # Sélection cours du jour côté MyKomu et ADE
+    cours_mk_du_jour = [c for c in content if isinstance(c, dict) and datetime.fromisoformat(c["start"]).date() == date_jour]
+    cours_ade_du_jour = [a for a in ade_events if a["start"].date() == date_jour]
 
-    # Détection cours obligatoire
-    title_html = cours.get("title", "")
-    cours["obligatoire"] = False
-    if title_html:
-        soup = BeautifulSoup(title_html, "html.parser")
-        if soup.find("i", class_=myk_obligatory_class_selector):
-            cours["obligatoire"] = True
+    # Matching global
+    mapping = matcher_cours_journee(cours_mk_du_jour, cours_ade_du_jour)
 
-    prefix = "★ " if cours.get("obligatoire") else ""
-    e.name = f"{prefix}{type_cours} - {intitule}"
+    # Génération des events ICS
+    for idx, cours in enumerate(cours_mk_du_jour):
+        e = Event()
+        type_cours = clean_text(cours.get("TYPE_COURS", "")).strip("- ")
+        intitule = clean_text(cours.get("INTITULE", ""))
 
-    # Dates
-    start_dt = datetime.fromisoformat(cours["start"])
-    end_dt = datetime.fromisoformat(cours["end"])
-    e.begin = tz_paris.localize(start_dt)
-    e.end = tz_paris.localize(end_dt)
+        # Détection cours obligatoire
+        title_html = cours.get("title", "")
+        cours["obligatoire"] = False
+        if title_html:
+            soup = BeautifulSoup(title_html, "html.parser")
+            if soup.find("i", class_=myk_obligatory_class_selector):
+                cours["obligatoire"] = True
 
-    # Description
-    description_parts = [
-        f"Le {start_dt.strftime('%d/%m/%Y')} de {start_dt.strftime('%H:%M')} à {end_dt.strftime('%H:%M')}",
-        f"Cours obligatoire : <b>{'Oui' if cours.get('obligatoire') else 'Non'}</b>"
-    ]
-    if type_cours:
-        description_parts.append(f"Type cours : <b>{type_cours}</b>")
-    if intitule:
-        description_parts.append(f"Intitulé : <b>{intitule}</b>")
-    if cours.get("GROUPE"):
-        raw_groupe = strip_html(str(cours["GROUPE"])).strip()
-        match = re.match(r'^Gpe\s*:\s*(?:Gr\s*)?(.+)$', raw_groupe, flags=re.IGNORECASE)
-        clean_groupe = match.group(1).strip() if match else raw_groupe
-        description_parts.append(f"Groupe : <b>{clean_groupe}</b>")
-    if cours.get("MEMBRE_PERSO"):
-        clean_formateur = re.sub(r"^Formateur\(s\)\s*:\s*", "", strip_html(str(cours["MEMBRE_PERSO"])))
-        description_parts.append(f"Formateur(s) : <b>{clean_formateur}</b>")
-    if cours.get("INTERVENANT"):
-        clean_intervenant = re.sub(r"^Intervenant\(s\)\s*:\s*", "", strip_html(str(cours["INTERVENANT"])))
-        description_parts.append(f"Intervenant(s) : <b>{clean_intervenant}</b>")
+        prefix = "★ " if cours.get("obligatoire") else ""
+        e.name = f"{prefix}{type_cours} - {intitule}"
 
-    description_parts.append("")
+        # Dates
+        start_dt = datetime.fromisoformat(cours["start"])
+        end_dt = datetime.fromisoformat(cours["end"])
+        e.begin = tz_paris.localize(start_dt)
+        e.end = tz_paris.localize(end_dt)
 
-    ue_code_clean = None
-    if cours.get("UE_CODE"):
-        ue_code_clean = re.sub(r'^(UE\s*:)\s*', '', strip_html(str(cours['UE_CODE'])))
-        description_parts.append(f"UE code : {ue_code_clean}")
-    if cours.get("UE_LIBE"):
-        description_parts.append(f"UE libellé : {strip_html(cours['UE_LIBE'])}")
+        # Description
+        description_parts = [
+            f"Le {start_dt.strftime('%d/%m/%Y')} de {start_dt.strftime('%H:%M')} à {end_dt.strftime('%H:%M')}",
+            f"Cours obligatoire : <b>{'Oui' if cours.get('obligatoire') else 'Non'}</b>"
+        ]
+        if type_cours:
+            description_parts.append(f"Type cours : <b>{type_cours}</b>")
+        if intitule:
+            description_parts.append(f"Intitulé : <b>{intitule}</b>")
+        if cours.get("GROUPE"):
+            raw_groupe = strip_html(str(cours["GROUPE"])).strip()
+            match = re.match(r'^Gpe\s*:\s*(?:Gr\s*)?(.+)$', raw_groupe, flags=re.IGNORECASE)
+            clean_groupe = match.group(1).strip() if match else raw_groupe
+            description_parts.append(f"Groupe : <b>{clean_groupe}</b>")
+        if cours.get("MEMBRE_PERSO"):
+            clean_formateur = re.sub(r"^Formateur\(s\)\s*:\s*", "", strip_html(str(cours["MEMBRE_PERSO"])))
+            description_parts.append(f"Formateur(s) : <b>{clean_formateur}</b>")
+        if cours.get("INTERVENANT"):
+            clean_intervenant = re.sub(r"^Intervenant\(s\)\s*:\s*", "", strip_html(str(cours["INTERVENANT"])))
+            description_parts.append(f"Intervenant(s) : <b>{clean_intervenant}</b>")
 
-    # UNESS
-    if ue_code_clean in ue_to_uness:
-        uness_id = ue_to_uness[ue_code_clean]
-        description_parts.append(f"Lien UNESS : <b>{uness_base_url}?id={uness_id}</b>")
+        description_parts.append("")
 
-    description_clean = [
-        re.sub(r"<br\s*/?>", " - ", part, flags=re.IGNORECASE).replace("\n", " - ").replace("\r", "")
-        for part in description_parts
-    ]
-    e.description = "\n".join(description_clean)
-    e.location = trouver_salle_ade(cours, ade_events)
-    final_cal.events.add(e)
+        if cours.get("UE_CODE"):
+            ue_code_clean = re.sub(r'^(UE\s*:)\s*', '', strip_html(str(cours['UE_CODE'])))
+            description_parts.append(f"UE code : {ue_code_clean}")
+        if cours.get("UE_LIBE"):
+            description_parts.append(f"UE libellé : {strip_html(cours['UE_LIBE'])}")
+
+        description_clean = [
+            re.sub(r"<br\s*/?>", " - ", part, flags=re.IGNORECASE).replace("\n", " - ").replace("\r", "")
+            for part in description_parts
+        ]
+        e.description = "\n".join(description_clean)
+
+        # Salle issue du matching global
+        e.location = mapping.get(idx, "Non précisée")
+
+        final_cal.events.add(e)
 
 # --- Sauvegarde ICS ---
 with open("edt_global.ics", "w", encoding="utf-8") as f:
@@ -243,4 +372,3 @@ with open("edt_global.ics", "w", encoding="utf-8") as f:
 
 print("✅ Fichier edt_global.ics généré avec succès !")
 watchdog.cancel()
-
