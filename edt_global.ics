@@ -2,145 +2,28 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Le 22/09/2025 de 13:00 à 15:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Technologie radiologie de projection 1/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 3.02.S1\nUE libellé : Physique appliquée et technologie en imagerie radiologique
-DTEND:20250922T130000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250922T110000Z
-SUMMARY:★ CM - Technologie radiologie de projection 1/4
-UID:f113ddbb-ef7c-4897-8192-86ab36c4ae92@f113.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 26/09/2025 de 10:30 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Explorations radiologiques des membres supérieurs : épaule</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection
-DTEND:20250926T100000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250926T083000Z
-SUMMARY:★ CM - Explorations radiologiques des membres supérieurs : épaule
-UID:c5dfc3a6-2b5c-41bb-836a-63606ed23c0c@c5df.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 24/09/2025 de 08:30 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Explorations radiologiques des membres supérieurs : coude\, clavicule</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection
-DTEND:20250924T080000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250924T063000Z
-SUMMARY:★ CM - Explorations radiologiques des membres supérieurs : coude\, clavicule
-UID:7b0b294a-3ba1-420c-b3e0-911490eb4185@7b0b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 24/09/2025 de 10:15 à 12:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Anatomie membre supérieur 3/3</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>MICHELLAND SANDRA</b>\n\nUE code : 2.01.S1\nUE libellé : Anatomie générale et anatomie des membres
-DTEND:20250924T101500Z
-LOCATION:IFPS Salle 202\,IFPS Salle 264
-DTSTART:20250924T081500Z
-SUMMARY:★ CM - Anatomie membre supérieur 3/3
-UID:d0062a67-6dae-45ea-9c7d-66fa4281c950@d006.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 23/09/2025 de 13:15 à 15:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Sociologie 3/3</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>KONAN Guy Raoul</b>\n\nUE code : 1.01.S1\nUE libellé : Psychologie\, sociologie\, anthropologie
-DTEND:20250923T131500Z
-LOCATION:IFPS Salle 264
-DTSTART:20250923T111500Z
-SUMMARY:★ CM - Sociologie 3/3
-UID:4fe461a5-be80-4930-a53b-2cde18a1d284@4fe4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 26/09/2025 de 08:15 à 10:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Radioactivité 3/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale
-DTEND:20250926T081500Z
-LOCATION:IFPS Salle 264
-DTSTART:20250926T061500Z
-SUMMARY:★ CM - Radioactivité 3/4
-UID:38dda4c8-3e68-49f0-9f23-8e25d6771894@38dd.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 22/09/2025 de 15:00 à 17:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG : préparation d'injectables : prérequis et invariants</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
-DTEND:20250922T150000Z
-DTSTART:20250922T130000Z
-SUMMARY:TPG - TPG : préparation d'injectables : prérequis et invariants
-UID:9cf3e771-d8bc-4494-b6c6-63e261c097bc@9cf3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 22/09/2025 de 09:00 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Soins liés à la mobilisation\, prévention et traitement des escarres</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
-DTEND:20250922T080000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250922T070000Z
-SUMMARY:★ CM - Soins liés à la mobilisation\, prévention et traitement des escarres
-UID:11132a2e-558a-472c-891b-828f267dbc28@1113.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 23/09/2025 de 08:30 à 10:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Biologie : Les molécules constitutives du vivant et leur fonction dans les équilibres ou déséquilibres biologiques 1/2</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>LARDY Bernard</b>\n\nUE code : 2.04.S1\nUE libellé : Biologie cellulaire et moléculaire
-DTEND:20250923T083000Z
-LOCATION:IFPS Salle 264
-DTSTART:20250923T063000Z
-SUMMARY:★ CM - Biologie : Les molécules constitutives du vivant et leur fonction dans les équilibres ou déséquilibres biologiques 1/2
-UID:200eb0be-44a8-45e9-aa61-0c589ce67f8b@200e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 23/09/2025 de 16:00 à 18:00\nCours obligatoire : <b>Non</b>\nType cours : <b>CM</b>\nIntitulé : <b>TPG TP Interfilières : Cours sur UNESS</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
-DTEND:20250923T160000Z
-DTSTART:20250923T140000Z
-SUMMARY:CM - TPG TP Interfilières : Cours sur UNESS
-UID:0d5db07c-4526-4d8a-91cb-79ca8f6e9d71@0d5d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 25/09/2025 de 10:45 à 11:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>SEPI : préparation d'injectables : prérequis et invariants</b>\nGroupe : <b>2/2</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
-DTEND:20250925T094500Z
-LOCATION:IFPS Salle 203
-DTSTART:20250925T084500Z
-SUMMARY:★ TD - SEPI : préparation d'injectables : prérequis et invariants
-UID:b78ef54f-f25f-46da-b748-9fa299e19467@b78e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 25/09/2025 de 13:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TPG</b>\nIntitulé : <b>Travail personnel avant TD sémantique médicale</b>\nGroupe : <b>1/2</b>\n\nUE code : 2.05.S1\nUE libellé : Physiologie générale\, physiologie\, sémiologie et pathologie ostéo articulaire
-DTEND:20250925T133000Z
-LOCATION:IFPS Salle 201
-DTSTART:20250925T113000Z
-SUMMARY:★ TPG - Travail personnel avant TD sémantique médicale
-UID:6b06fbf9-e6e1-426f-86db-7c2e971b79c0@6b06.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 24/09/2025 de 13:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TPG</b>\nIntitulé : <b>Travail personnel avant TD sémantique médicale</b>\nGroupe : <b>2/2</b>\n\nUE code : 2.05.S1\nUE libellé : Physiologie générale\, physiologie\, sémiologie et pathologie ostéo articulaire
-DTEND:20250924T133000Z
-LOCATION:IFPS Salle 201
-DTSTART:20250924T113000Z
-SUMMARY:★ TPG - Travail personnel avant TD sémantique médicale
-UID:40aa223b-be99-4e33-b775-e8539878b997@40aa.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 22/09/2025 de 10:15 à 11:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>Calculs de dose 2/3</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
-DTEND:20250922T094500Z
-LOCATION:IFPS Salle 204\,IFPS Salle 206
-DTSTART:20250922T081500Z
-SUMMARY:★ TD - Calculs de dose 2/3
-UID:0e48b5ab-e500-436a-8f84-b4a109dee2aa@0e48.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 24/09/2025 de 16:00 à 18:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG TP Interfilières : Cours sur UNESS</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
-DTEND:20250924T160000Z
-DTSTART:20250924T140000Z
-SUMMARY:TPG - TPG TP Interfilières : Cours sur UNESS
-UID:e63b7a0b-50f1-46a2-93d7-fa1690314eed@e63b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 25/09/2025 de 09:30 à 10:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>SEPI : préparation d'injectables : prérequis et invariants</b>\nGroupe : <b>1/2</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
-DTEND:20250925T083000Z
-LOCATION:IFPS Salle 203
-DTSTART:20250925T073000Z
-SUMMARY:★ TD - SEPI : préparation d'injectables : prérequis et invariants
-UID:a3a29ace-91fd-41ea-9304-404edc816d80@a3a2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Le 25/09/2025 de 13:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>Hygiène : quizz précautions standards et complémentaires</b>\nGroupe : <b>2/2</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections
-DTEND:20250925T133000Z
-LOCATION:IFPS Salle 203
-DTSTART:20250925T113000Z
-SUMMARY:★ TD - Hygiène : quizz précautions standards et complémentaires
-UID:0ef50172-d743-496b-91fa-a2d711f2d9fe@0ef5.org
-END:VEVENT
-BEGIN:VEVENT
 DESCRIPTION:Le 23/09/2025 de 10:30 à 12:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Physique fondamentale 4/6</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>THIBAULT Pierre</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale
 DTEND:20250923T103000Z
 LOCATION:IFPS Salle 264
 DTSTART:20250923T083000Z
 SUMMARY:★ CM - Physique fondamentale 4/6
-UID:e5f7034b-4f66-4dc8-9531-f454c70be944@e5f7.org
+UID:14ccc172-bef3-4bac-adb2-00a143892cf8@14cc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 29/09/2025 de 13:30 à 15:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>TD sémantique médicale</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>DALECKY Mickael</b>\n\nUE code : 2.05.S1\nUE libellé : Physiologie générale\, physiologie\, sémiologie et pathologie ostéo articulaire
+DTEND:20250929T130000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250929T113000Z
+SUMMARY:★ TD - TD sémantique médicale
+UID:1d86e7a8-4eab-4276-9415-8fd36d146479@1d86.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 30/09/2025 de 15:45 à 17:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>TD technologie radio 1/2</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>CLAUDET Dominique</b>\n\nUE code : 3.02.S1\nUE libellé : Physique appliquée et technologie en imagerie radiologique
+DTEND:20250930T151500Z
+LOCATION:IFPS Salle 264
+DTSTART:20250930T134500Z
+SUMMARY:★ TD - TD technologie radio 1/2
+UID:7be52490-06d9-4d45-b552-dd1dc54578a7@7be5.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Le 24/09/2025 de 13:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>Hygiène : quizz précautions standards et complémentaires</b>\nGroupe : <b>1/2</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections
@@ -148,13 +31,346 @@ DTEND:20250924T133000Z
 LOCATION:IFPS Salle 203
 DTSTART:20250924T113000Z
 SUMMARY:★ TD - Hygiène : quizz précautions standards et complémentaires
-UID:5791c37e-d4d1-419a-be2e-f35953cd2720@5791.org
+UID:e3126868-a4fe-4bd4-b897-96b855a95452@e312.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 26/09/2025 de 10:30 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Explorations radiologiques des membres supérieurs : épaule</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection
+DTEND:20250926T100000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250926T083000Z
+SUMMARY:★ CM - Explorations radiologiques des membres supérieurs : épaule
+UID:a39828ea-a275-4244-b798-b3ef6c1fff3f@a398.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 23/09/2025 de 13:15 à 15:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Sociologie 3/3</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>KONAN Guy Raoul</b>\n\nUE code : 1.01.S1\nUE libellé : Psychologie\, sociologie\, anthropologie
+DTEND:20250923T131500Z
+LOCATION:IFPS Salle 264
+DTSTART:20250923T111500Z
+SUMMARY:★ CM - Sociologie 3/3
+UID:f4328e1e-f401-4bfa-b16a-3b649968a1fd@f432.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 30/09/2025 de 10:00 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Radioactivité 4/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale
+DTEND:20250930T100000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250930T080000Z
+SUMMARY:★ CM - Radioactivité 4/4
+UID:8be224ee-13c1-41a1-9747-77d2f1620431@8be2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 01/10/2025 de 08:45 à 09:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>TP</b>\nIntitulé : <b>Hygiène des mains</b>\nGroupe : <b>B</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections
+DTEND:20251001T074500Z
+LOCATION:Non précisée
+DTSTART:20251001T064500Z
+SUMMARY:★ TP - Hygiène des mains
+UID:7b6d1ea3-dd75-4baf-bd4d-7123f631b661@7b6d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 02/10/2025 de 08:00 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>TP</b>\nIntitulé : <b>TP Technique radio Membre supérieur</b>\nGroupe : <b>C</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection
+DTEND:20251002T080000Z
+LOCATION:IFPS TP 210
+DTSTART:20251002T060000Z
+SUMMARY:★ TP - TP Technique radio Membre supérieur
+UID:2a1cba91-fc25-4ffb-8649-fe2ca396e812@2a1c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 06/10/2025 de 10:15 à 12:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Technologie radiologie de projection 3/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 3.02.S1\nUE libellé : Physique appliquée et technologie en imagerie radiologique
+DTEND:20251006T101500Z
+LOCATION:Non précisée
+DTSTART:20251006T081500Z
+SUMMARY:★ CM - Technologie radiologie de projection 3/4
+UID:1273011e-7395-4259-94b4-273c1f0e4d95@1273.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 03/10/2025 de 08:00 à 09:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Anatomie membre inférieur 1/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 2.01.S1\nUE libellé : Anatomie générale et anatomie des membres
+DTEND:20251003T070000Z
+LOCATION:IFPS Salle 264
+DTSTART:20251003T060000Z
+SUMMARY:★ CM - Anatomie membre inférieur 1/4
+UID:b3926dfa-5a2d-4951-b521-994ea73f5f32@b392.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 03/10/2025 de 13:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Ondes électromagnétiques\, rayonnements corpusculaires et interactions avec la matière 1/5</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>SEGONDS Patricia</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale
+DTEND:20251003T133000Z
+LOCATION:IFPS Salle 264
+DTSTART:20251003T113000Z
+SUMMARY:★ CM - Ondes électromagnétiques\, rayonnements corpusculaires et interactions avec la matière 1/5
+UID:2ffeb698-bc0e-4aef-8e2f-bc3b6bbb6544@2ffe.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 25/09/2025 de 09:30 à 10:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>SEPI : préparation d'injectables : prérequis et invariants</b>\nGroupe : <b>1/2</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
+DTEND:20250925T083000Z
+LOCATION:IFPS Salle 203
+DTSTART:20250925T073000Z
+SUMMARY:★ TD - SEPI : préparation d'injectables : prérequis et invariants
+UID:1b24ffdd-65c3-45c7-a702-4b92f67369b1@1b24.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 24/09/2025 de 08:30 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Explorations radiologiques des membres supérieurs : coude\, clavicule</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection
+DTEND:20250924T080000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250924T063000Z
+SUMMARY:★ CM - Explorations radiologiques des membres supérieurs : coude\, clavicule
+UID:00c20df7-f04a-4038-8f20-35a77ff2768c@00c2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 24/09/2025 de 10:15 à 12:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Anatomie membre supérieur 3/3</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>MICHELLAND SANDRA</b>\n\nUE code : 2.01.S1\nUE libellé : Anatomie générale et anatomie des membres
+DTEND:20250924T101500Z
+LOCATION:IFPS Salle 202\,IFPS Salle 264
+DTSTART:20250924T081500Z
+SUMMARY:★ CM - Anatomie membre supérieur 3/3
+UID:fd038959-5312-4963-845a-d8d88e254488@fd03.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 02/10/2025 de 08:45 à 09:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>TP</b>\nIntitulé : <b>Hygiène des mains</b>\nGroupe : <b>D</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections
+DTEND:20251002T074500Z
+LOCATION:IFPS TP 213
+DTSTART:20251002T064500Z
+SUMMARY:★ TP - Hygiène des mains
+UID:6ac68c68-cf9a-41cb-a909-53620740a0cf@6ac6.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 24/09/2025 de 16:00 à 18:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG TP Interfilières : Cours sur UNESS</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
+DTEND:20250924T160000Z
+DTSTART:20250924T140000Z
+SUMMARY:TPG - TPG TP Interfilières : Cours sur UNESS
+UID:e6fbb94d-a43b-4177-b1dc-c04e162537b4@e6fb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 22/09/2025 de 15:00 à 17:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG : préparation d'injectables : prérequis et invariants</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
+DTEND:20250922T150000Z
+DTSTART:20250922T130000Z
+SUMMARY:TPG - TPG : préparation d'injectables : prérequis et invariants
+UID:ce32899b-2f97-4e65-8036-9d0d1ade4149@ce32.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 02/10/2025 de 13:30 à 16:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Electricité et magnétisme 1/4</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>CUELLO  Nicolas</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale
+DTEND:20251002T143000Z
+LOCATION:IFPS Salle 230
+DTSTART:20251002T113000Z
+SUMMARY:★ CM - Electricité et magnétisme 1/4
+UID:fbceba34-93b1-41da-80f2-1c3da59b4393@fbce.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 29/09/2025 de 08:00 à 12:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>TP Interfilières</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
+DTEND:20250929T103000Z
+LOCATION:Non précisée
+DTSTART:20250929T060000Z
+SUMMARY:★ CM - TP Interfilières
+UID:f4eba846-4531-4093-91f5-5f6c9afa4db1@f4eb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 30/09/2025 de 08:30 à 09:30\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG 3 : Infection associée aux soins</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections
+DTEND:20250930T073000Z
+LOCATION:Non précisée
+DTSTART:20250930T063000Z
+SUMMARY:TPG - TPG 3 : Infection associée aux soins
+UID:21936c0d-6441-40dc-b9fe-f0d7f85ffe00@2193.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 22/09/2025 de 09:00 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Soins liés à la mobilisation\, prévention et traitement des escarres</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
+DTEND:20250922T080000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250922T070000Z
+SUMMARY:★ CM - Soins liés à la mobilisation\, prévention et traitement des escarres
+UID:2a0d0b53-ff7c-4f81-adcf-bef3d377bf5e@2a0d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 23/09/2025 de 08:30 à 10:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Biologie : Les molécules constitutives du vivant et leur fonction dans les équilibres ou déséquilibres biologiques 1/2</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>LARDY Bernard</b>\n\nUE code : 2.04.S1\nUE libellé : Biologie cellulaire et moléculaire
+DTEND:20250923T083000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250923T063000Z
+SUMMARY:★ CM - Biologie : Les molécules constitutives du vivant et leur fonction dans les équilibres ou déséquilibres biologiques 1/2
+UID:2fa2b4ce-54a1-4972-aa00-a33d6c8a8269@2fa2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 01/10/2025 de 10:15 à 11:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>TP</b>\nIntitulé : <b>Hygiène des mains</b>\nGroupe : <b>A</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections
+DTEND:20251001T091500Z
+LOCATION:IFPS TP 213
+DTSTART:20251001T081500Z
+SUMMARY:★ TP - Hygiène des mains
+UID:b397aa0e-49d2-4235-b026-6e023ef53751@b397.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 01/10/2025 de 08:00 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>TP</b>\nIntitulé : <b>TP Technique radio Membre supérieur</b>\nGroupe : <b>A</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection
+DTEND:20251001T080000Z
+LOCATION:Non précisée
+DTSTART:20251001T060000Z
+SUMMARY:★ TP - TP Technique radio Membre supérieur
+UID:c36cb7e3-fe64-45a3-a9f9-dbe5c94cb797@c36c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 25/09/2025 de 10:45 à 11:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>SEPI : préparation d'injectables : prérequis et invariants</b>\nGroupe : <b>2/2</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
+DTEND:20250925T094500Z
+LOCATION:IFPS Salle 203
+DTSTART:20250925T084500Z
+SUMMARY:★ TD - SEPI : préparation d'injectables : prérequis et invariants
+UID:937afe14-2325-43cc-8352-6b79dfb9e33c@937a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 06/10/2025 de 13:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Ondes électromagnétiques\, rayonnements corpusculaires et interactions avec la matière 2/5</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>SEGONDS Patricia</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale
+DTEND:20251006T133000Z
+LOCATION:Non précisée
+DTSTART:20251006T113000Z
+SUMMARY:★ CM - Ondes électromagnétiques\, rayonnements corpusculaires et interactions avec la matière 2/5
+UID:c110331a-615d-4f67-bae7-4d1355b6a52e@c110.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 29/09/2025 de 15:15 à 16:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Remise des livres : pensez aux chèques !</b>\nGroupe : <b>Promotion entière</b>\n
+DTEND:20250929T141500Z
+LOCATION:Non précisée
+DTSTART:20250929T131500Z
+SUMMARY:★ CM - Remise des livres : pensez aux chèques !
+UID:0546d09b-0820-4158-baa9-406299ecf982@0546.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 01/10/2025 de 16:00 à 17:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Anatomie générale: Abdomen</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 2.01.S1\nUE libellé : Anatomie générale et anatomie des membres
+DTEND:20251001T150000Z
+LOCATION:Non précisée
+DTSTART:20251001T140000Z
+SUMMARY:★ CM - Anatomie générale: Abdomen
+UID:cd661e58-f311-45d6-8f48-81cba7e12d35@cd66.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 02/10/2025 de 10:00 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>TP</b>\nIntitulé : <b>TP Technique radio Membre supérieur</b>\nGroupe : <b>D</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection
+DTEND:20251002T100000Z
+LOCATION:IFPS TP 210
+DTSTART:20251002T080000Z
+SUMMARY:★ TP - TP Technique radio Membre supérieur
+UID:ee62272d-754d-43ef-9019-4764780d8337@ee62.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 02/10/2025 de 10:30 à 11:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TP</b>\nIntitulé : <b>Hygiène des mains</b>\nGroupe : <b>C</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections
+DTEND:20251002T093000Z
+LOCATION:IFPS TP 213
+DTSTART:20251002T083000Z
+SUMMARY:★ TP - Hygiène des mains
+UID:7fcee61a-b70e-4dfa-8c11-42a25a87d8b5@7fce.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 24/09/2025 de 13:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TPG</b>\nIntitulé : <b>Travail personnel avant TD sémantique médicale</b>\nGroupe : <b>2/2</b>\n\nUE code : 2.05.S1\nUE libellé : Physiologie générale\, physiologie\, sémiologie et pathologie ostéo articulaire
+DTEND:20250924T133000Z
+LOCATION:IFPS Salle 201
+DTSTART:20250924T113000Z
+SUMMARY:★ TPG - Travail personnel avant TD sémantique médicale
+UID:50c1bf74-5b58-46b4-98fe-6b391810f9ca@50c1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 26/09/2025 de 08:15 à 10:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Radioactivité 3/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 2.11.S1\nUE libellé : Physique fondamentale
+DTEND:20250926T081500Z
+LOCATION:IFPS Salle 264
+DTSTART:20250926T061500Z
+SUMMARY:★ CM - Radioactivité 3/4
+UID:2d786f9b-1721-4816-b540-5a748f4cbb57@2d78.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 03/10/2025 de 10:15 à 12:15\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Explorations radiologiques: Thorax/Abdomen</b>\nGroupe : <b>Promotion entière</b>\nIntervenant(s) : <b>MARGOUM Soufiane</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection
+DTEND:20251003T101500Z
+LOCATION:IFPS Salle 264
+DTSTART:20251003T081500Z
+SUMMARY:★ CM - Explorations radiologiques: Thorax/Abdomen
+UID:44db518e-7dd0-44a3-9293-77bb16783f6f@44db.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 01/10/2025 de 10:00 à 12:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>TP</b>\nIntitulé : <b>TP Technique radio Membre supérieur</b>\nGroupe : <b>B</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection
+DTEND:20251001T100000Z
+LOCATION:IFPS TP 210
+DTSTART:20251001T080000Z
+SUMMARY:★ TP - TP Technique radio Membre supérieur
+UID:f7ef44f6-27ee-4552-a649-036d7e23f424@f7ef.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 06/10/2025 de 15:45 à 17:45\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG 4.1 et 4.2 : AES\, désinfection\, stérilisation</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections
+DTEND:20251006T154500Z
+LOCATION:Non précisée
+DTSTART:20251006T134500Z
+SUMMARY:TPG - TPG 4.1 et 4.2 : AES\, désinfection\, stérilisation
+UID:9f012cdf-4e00-4b0f-9232-7fc61fc5bb97@9f01.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 30/09/2025 de 13:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Technologie radiologie de projection 2/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 3.02.S1\nUE libellé : Physique appliquée et technologie en imagerie radiologique
+DTEND:20250930T133000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250930T113000Z
+SUMMARY:★ CM - Technologie radiologie de projection 2/4
+UID:b38bef73-bbe8-4c6e-ab84-fb4ce010ee71@b38b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 22/09/2025 de 10:15 à 11:45\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>Calculs de dose 2/3</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
+DTEND:20250922T094500Z
+LOCATION:IFPS Salle 204\,IFPS Salle 206
+DTSTART:20250922T081500Z
+SUMMARY:★ TD - Calculs de dose 2/3
+UID:f112a32b-3eb1-4f2a-a4d9-2921a516bf0d@f112.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Le 26/09/2025 de 13:00 à 16:00\nCours obligatoire : <b>Non</b>\nType cours : <b>TPG</b>\nIntitulé : <b>TPG Révisions avant TP radio membre sup</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.04.S1\nUE libellé : Explorations radiologiques de projection
 DTEND:20250926T140000Z
 DTSTART:20250926T110000Z
 SUMMARY:TPG - TPG Révisions avant TP radio membre sup
-UID:3947c6b6-381c-4a25-bb7c-b23ac396fed8@3947.org
+UID:d7b23e58-b2ad-4cc7-b934-1b60099c2457@d7b2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 25/09/2025 de 13:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>Hygiène : quizz précautions standards et complémentaires</b>\nGroupe : <b>2/2</b>\nFormateur(s) : <b>ZAZA Jordan</b>\n\nUE code : 3.10.S1\nUE libellé : Hygiène et prévention des infections
+DTEND:20250925T133000Z
+LOCATION:IFPS Salle 203
+DTSTART:20250925T113000Z
+SUMMARY:★ TD - Hygiène : quizz précautions standards et complémentaires
+UID:97c4e0e4-9c86-4465-ba14-fb057d890067@97c4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 23/09/2025 de 16:00 à 18:00\nCours obligatoire : <b>Non</b>\nType cours : <b>CM</b>\nIntitulé : <b>TPG TP Interfilières : Cours sur UNESS</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
+DTEND:20250923T160000Z
+DTSTART:20250923T140000Z
+SUMMARY:CM - TPG TP Interfilières : Cours sur UNESS
+UID:5b1b7b4f-4698-4378-84f4-c899f4a86c05@5b1b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 01/10/2025 de 13:00 à 15:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Radioprotection (1/3)</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 3.08.S1\nUE libellé : Radioprotection\, principes fondamentaux\, radiobiologie
+DTEND:20251001T130000Z
+LOCATION:IFPS Salle 115
+DTSTART:20251001T110000Z
+SUMMARY:★ CM - Radioprotection (1/3)
+UID:39825e5a-9ac0-4a4a-9dfa-7759eb641e1f@3982.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 25/09/2025 de 13:30 à 15:30\nCours obligatoire : <b>Oui</b>\nType cours : <b>TPG</b>\nIntitulé : <b>Travail personnel avant TD sémantique médicale</b>\nGroupe : <b>1/2</b>\n\nUE code : 2.05.S1\nUE libellé : Physiologie générale\, physiologie\, sémiologie et pathologie ostéo articulaire
+DTEND:20250925T133000Z
+LOCATION:IFPS Salle 201
+DTSTART:20250925T113000Z
+SUMMARY:★ TPG - Travail personnel avant TD sémantique médicale
+UID:e6c5350e-f1d9-4625-8a0c-4b453cde9b23@e6c5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 06/10/2025 de 08:00 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Radioprotection (2/3)</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 3.08.S1\nUE libellé : Radioprotection\, principes fondamentaux\, radiobiologie
+DTEND:20251006T080000Z
+LOCATION:Non précisée
+DTSTART:20251006T060000Z
+SUMMARY:★ CM - Radioprotection (2/3)
+UID:51171f30-4cea-4164-b684-0db7307e501b@5117.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 22/09/2025 de 13:00 à 15:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Technologie radiologie de projection 1/4</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>MIQUEL Lucie</b>\n\nUE code : 3.02.S1\nUE libellé : Physique appliquée et technologie en imagerie radiologique
+DTEND:20250922T130000Z
+LOCATION:IFPS Salle 264
+DTSTART:20250922T110000Z
+SUMMARY:★ CM - Technologie radiologie de projection 1/4
+UID:ff78ce3d-8867-40ff-9db7-92f72262aaf4@ff78.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 01/10/2025 de 15:00 à 16:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>CM</b>\nIntitulé : <b>Anatomie générale: Thorax</b>\nGroupe : <b>Promotion entière</b>\n\nUE code : 2.01.S1\nUE libellé : Anatomie générale et anatomie des membres
+DTEND:20251001T140000Z
+LOCATION:Non précisée
+DTSTART:20251001T130000Z
+SUMMARY:★ CM - Anatomie générale: Thorax
+UID:acdca4c3-829a-479b-9e3c-d4ad0b20c5d8@acdc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Le 03/10/2025 de 09:00 à 10:00\nCours obligatoire : <b>Oui</b>\nType cours : <b>TD</b>\nIntitulé : <b>Calculs de dose 3/3</b>\nGroupe : <b>Promotion entière</b>\nFormateur(s) : <b>ROUCHOUZE FABIENNE</b>\n\nUE code : 4.01.S1\nUE libellé : Techniques de soins
+DTEND:20251003T080000Z
+LOCATION:IFPS Salle 264\,IFPS Salle 204
+DTSTART:20251003T070000Z
+SUMMARY:★ TD - Calculs de dose 3/3
+UID:0f42f340-8268-443d-bcde-eef0351ae426@0f42.org
 END:VEVENT
 END:VCALENDAR
