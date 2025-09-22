@@ -58,7 +58,7 @@ if not all(required_vars):
 # --- Définition des dates dynamiques ---
 tz_paris = pytz.timezone("Europe/Paris")
 start_dt = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0, tzinfo=tz_paris)
-end_dt = start_dt + timedelta(days=5)
+end_dt = start_dt + timedelta(days=14)
 
 # Dates pour MyKomunoté (ISO avec fuseau)
 mk_start = start_dt.isoformat()
@@ -372,3 +372,4 @@ with open("edt_global.ics", "w", encoding="utf-8") as f:
 
 print("✅ Fichier edt_global.ics généré avec succès !")
 watchdog.cancel()
+
