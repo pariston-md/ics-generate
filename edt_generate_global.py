@@ -205,7 +205,7 @@ def similarite_tokens(mk_tokens, ade_tokens, poids_mots=None) -> float:
         poids_total += poids
         for ade in ade_tokens:
             ratio = SequenceMatcher(None, mk, ade).ratio()
-            if ratio >= 0.7:
+            if ratio >= 0.6:
                 matches += poids
                 break
     return matches / poids_total if poids_total > 0 else 0
