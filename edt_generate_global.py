@@ -205,7 +205,7 @@ def similarite_tokens(mk_tokens, ade_tokens, poids_mots=None) -> float:
         poids_total += poids
         for ade in ade_tokens:
             ratio = SequenceMatcher(None, mk, ade).ratio()
-            if ratio >= 0.6:
+            if ratio >= 0.7:
                 matches += poids
                 break
     return matches / poids_total if poids_total > 0 else 0
@@ -266,7 +266,8 @@ def matcher_cours_journee(cours_mk_du_jour, cours_ade_du_jour, seuil=0.2):
         print(f"\nCours MyKomu {i}: {mk_title}")
         for j, ade in enumerate(cours_ade_du_jour):
             ade_title = ade["summary"]
-            print(f"   -> ADE {j}: {ade_title} | score={score_matrix[i,j]:.2f}")
+            ade_location = ade["location"]
+            print(f"   -> ADE {j}: {ade_title} - Location : {ade_location} | score={score_matrix[i,j]:.2f}")
 
     # --- Appariement bruteforce (permutations) ---
     best_perm, best_score = None, -1
