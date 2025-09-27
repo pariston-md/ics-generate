@@ -273,7 +273,7 @@ def matcher_cours_journee(cours_mk_du_jour, cours_ade_du_jour, seuil=0.2):
     best_perm, best_score = None, -1
     for perm in itertools.permutations(range(n_ade), min(n_mk, n_ade)):
         total = sum(score_matrix[i, j] for i, j in enumerate(perm))
-        if total > best_score:
+        if total >= best_score:
             best_score = total
             best_perm = perm
 
