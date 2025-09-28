@@ -277,14 +277,52 @@ def matcher_cours_journee(cours_mk_du_jour, cours_ade_du_jour, seuil=0.2):
             best_score = total
             best_perm = perm
 
-    mapping = {}
-    for i, j in enumerate(best_perm):
-        if score_matrix[i, j] >= seuil:
-            mapping[i] = cours_ade_du_jour[j].get("location", "Non précisée")
+    print("\n--- Meilleure permutation trouvée ---")
+    for mk_idx, ade_idx in enumerate(best_perm):
+        mk_title = strip_html(cours_mk_du_jour[mk_idx].get("INTITULE",""))
+        ade_title = cours_ade_du_jour[ade_idx]["summary"]
+        loc = cours_ade_du_jour[ade_idx]["location"]
+        print(f"MK {mk_idx}: {mk_title} -> ADE {ade_idx}: {ade_title} | Salle={loc} | Score={score_matrix[mk_idx, ade_idx]:.2f}")
+    print("--- Fin permutation ---\n")
+
+
+    mapping = {i: "Cours non trouvé sur ADE" for i in range(n_mk)}
+
+    for mk_idx in range(n_mk):
+        # Chercher le meilleur ADE pour ce cours MyKomu
+        best_j = None
+        best_score = -1
+        for ade_idx in range(n_ade):
+            score = score_matrix[mk_idx, ade_idx]
+            if score > best_score:
+                best_score = score
+                best_j = ade_idx
+
+        # Vérifier le seuil
+        if best_j is not None and best_score >= seuil:
+            loc = cours_ade_du_jour[best_j].get("location", "").strip()
+            mapping[mk_idx] = loc if loc else "Non précisée"
         else:
-            mapping[i] = "Non précisée"
+            # Cas du cours non trouvé sur ADE
+            # Si TPG non obligatoire → laisser "Non précisée"
+            type_cours = cours_mk_du_jour[mk_idx].get("TYPE_COURS", "").lower()
+            obligatoire = cours_mk_du_jour[mk_idx].get("obligatoire", False)
+            if "tpg" in type_cours and not obligatoire:
+                mapping[mk_idx] = "Non précisée"
+            else:
+                mapping[mk_idx] = "Cours non trouvé sur ADE"
+
+
+    print("\n--- Résumé mapping (max par MK) ---")
+    for i in range(n_mk):
+        mk_title = strip_html(cours_mk_du_jour[i].get("INTITULE",""))
+        print(f"MyKomu {i}: {mk_title} -> {mapping[i]}")
+    print("--- Fin mapping ---\n")
+
 
     return mapping
+
+
 
 
 
@@ -363,6 +401,7 @@ for date_jour in dates_jours:
         e.description = "\n".join(description_clean)
 
         # Salle issue du matching global
+        print(f"[DEBUG] {date_jour} | {intitule} → {mapping.get(idx)}")
         e.location = mapping.get(idx, "Non précisée")
 
         final_cal.events.add(e)
@@ -373,4 +412,3 @@ with open("edt_global.ics", "w", encoding="utf-8") as f:
 
 print("✅ Fichier edt_global.ics généré avec succès !")
 watchdog.cancel()
-
